@@ -1,0 +1,126 @@
+$progressBar_height: 25vh;
+$circle_bg: #d6dadc;
+$circle_color_bg: darken(pink,10%);
+/* $circle_cnt_height: 20%; */
+$circle_size: 17vh;
+$circle_margin: 0 5vh 6vh 0;
+$inset_size: 15vh;
+$inset-color: #fbfbfb;
+$percentage_font_size: 6vh;
+$percentage_text_width: 20vh;
+$font_family: 'Amatic SC', cursive;
+
+
+html,body {
+	width: 100%;
+	height: 100%;
+}
+.progressBar_cnt {
+	width: 100%;
+	min-height: $progressBar_height;
+	/* background-color: pink; */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;	
+}
+.radial-progress {
+	width: $circle_size;
+	height: $circle_size;
+	background-color: $circle_bg;
+	margin: $circle_margin;
+	display: inline-block;
+	border-radius: 50%;
+		.circle {
+			.mask, .fill {
+				width: $circle_size;
+				height: $circle_size;
+				position: absolute;
+				border-radius: 50%;
+				-webkit-backface-visibility: hidden;
+				-webkit-transition: all 1s ease-out;
+				-moz-transition: all 1s ease-out;
+				-o-transition: all 1s ease-out;
+				transition: all 1s ease-out;
+			}
+			.mask {
+				clip: rect(0px, $circle_size, $circle_size, $circle_size/2);
+					.fill {
+						clip: rect(0px, $circle_size/2, $circle_size, 0px);
+						background-color: $circle_color_bg;
+					}
+					.fix {
+						background-color: $circle_color_bg;
+					}
+			}
+		}
+		.inset {
+			width: $inset_size;
+			height: $inset_size;
+			position: absolute;
+			margin-left: ($circle_size - $inset_size)/2;
+			margin-top: ($circle_size - $inset_size)/2;
+			background-color: $inset_color;
+			border-radius: 50%;
+				.percentage {
+					height: $percentage_font_size;
+					width: $percentage_text_width;
+					overflow: hidden;
+					position: absolute;
+					top: ($inset_size - $percentage_font_size) / 2;
+					left: ($inset_size - $percentage_text_width) / 2;
+					line-height: 1;
+						.numbers {
+							margin-top: -$percentage_font_size;
+							webkit-transition: all 1s ease-out;
+							-moz-transition: all 1s ease-out;
+							-o-transition: all 1s ease-out;
+							transition: all 1s ease-out;
+								span {
+									width: $percentage_text_width;
+									display: inline-block;
+									vertical-align: top;
+									text-align: center;
+									/* font-weight: 1000; */
+									font-size: $percentage_font_size;
+									font-family: $font_family;
+									color: black;
+								}
+						}
+				}
+		}	
+		.text_underCircle {
+			display: inline-block;
+			position: absolute;
+			text-align: center;
+			margin-left: ($circle_size / 2) / ($circle_size / 2);
+			width: $circle_size;
+			overflow: hidden;
+			margin-top: $circle_size;
+			font-family: $font_family;
+			font-size: $percentage_font_size - 2;
+			color: darken(pink,30%);
+		}
+}
+
+$i: 0;
+$increment: 180deg / 100;
+
+@for $i from 0 through 100 {
+	&[data-progress="#{$i}"] {
+			.circle {
+				.mask.full, .fill {
+					-webkit-transform: rotate($increment * $i);
+					-ms-transform: rotate($increment * $i);
+					transform: rotate($increment * $i);
+				}	
+				.fill.fix {
+					-webkit-transform: rotate($increment * $i * 2);
+					-ms-transform: rotate($increment * $i * 2);
+					transform: rotate($increment * $i * 2);
+				}
+			}
+			.inset .percentage .numbers {
+				width: $i * $percentage_text_width + $percentage_text_width;
+			}
+	}
+}

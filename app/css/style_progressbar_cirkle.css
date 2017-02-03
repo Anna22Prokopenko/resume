@@ -1,0 +1,36 @@
+.radial-progress {
+	background-color: #d6dadc;
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+}
+.mask, .fill {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	position: absolute;
+	-webkit-backface-visibility: hidden;
+	-webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+}
+.mask  {
+	clip: rect(0px, 120px, 120px, 60px);
+}
+.mask .fill {
+	clip: rect(0px, 60px, 120px, 0px);
+	background-color: #f30c9f;
+}
+.fill.fix {
+	background-color: #f30c9f;
+}
+.radial-progress .inset {
+	width: 100px;
+	height: 100px;
+	background-color: white;
+	position: absolute;
+	margin-left: 10px;
+	margin-top: 10px;
+	border-radius: 50%;
+}
