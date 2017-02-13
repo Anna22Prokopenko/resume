@@ -14,10 +14,36 @@ $blue_color: #b9daf7;
 /* $forma_width: ;
 $forma_height: ; */
 .contacts {
-	background: pink;
+	background: #fff;
 	height: $contacts_height;
 	width: $contacts_width;
 	position: relative;
+		.conect {
+			font-family: 'latin_modern_roman10_regular','Times New Roman',serif;    
+			font-size: 5vh;
+			font-weight: 500;
+			line-height: 8.6rem;
+			margin: 0 0 -10px 0;
+		}
+		.vertical_line {
+			display: block;
+			width: 1px;
+			margin: 20px auto;
+			height: 45px;
+			opacity: .3;
+			background-color: black;
+		}
+		.contact_post {
+			display: block;
+			color: black;
+			font-family: 'latin_modern_roman10_regular','Times New Roman',serif;
+			font-size: 2.5vh;
+			font-weight: 400;
+			letter-spacing: .06em;
+				&:visited, &:hover, &:active {
+					text-decoration: none;
+				}
+		}
 }
 .post_box_img {
 	width: $post_box_img_width;

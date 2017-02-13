@@ -9,6 +9,9 @@ $aboutFotoCircle_size: 25vh;
 	align-items: stretch;
 	flex-wrap: nowrap;
 	position: relative;
+	top: -13vh;
+	z-index: 2;
+	margin-bottom: -20vh;
 		hr {
 			border-top: 3px solid white;
 		}
