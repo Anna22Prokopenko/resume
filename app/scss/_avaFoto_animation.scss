@@ -1,3 +1,4 @@
+
 $aboutHeader_height: 26vh;
 $aboutFotoCircle_size: 25vh;
 
@@ -12,12 +13,18 @@ $aboutFotoCircle_size: 25vh;
 	top: -13vh;
 	z-index: 2;
 	margin-bottom: -20vh;
-		hr {
+		/* hr {
 			border-top: 3px solid white;
 		}
 		.line {
 			flex-basis: 36vw;
 			margin-top: $aboutHeader_height / 2;
+		} */
+		.title_under_foto {
+			position: absolute;
+			bottom: -7vh;
+			color: #b9b9b9;
+			font: 400 1.5em 'Raleway';
 		}
 		.foto_center {
 			flex-basis: 24vw;

@@ -1,12 +1,13 @@
 $progressBar_height: 25vh;
 $circle_bg: #d6dadc;
-$circle_color_bg: darken(pink,10%);
+$circle_color_bg: #cbddef;
+$under_circle_title_color: #4f6cb1;
 /* $circle_cnt_height: 20%; */
 $circle_size: 17vh;
 $radial_progress_size: 19vh;
 $circle_margin: 0 3vh 8vh 3vh;
 $inset_size: 15vh;
-$inset-color: #fbfbfb;
+$inset-color: #fff;
 $percentage_font_size: 6vh;
 $percentage_text_width: 20vh;
 $font_family: 'Amatic SC', cursive;
@@ -102,7 +103,7 @@ html,body {
 			margin-top: $radial_progress_size;
 			font-family: $font_family;
 			font-size: $percentage_font_size - 2;
-			color: darken(pink,30%);
+			color: $under_circle_title_color;
 		}
 }
 

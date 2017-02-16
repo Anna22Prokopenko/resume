@@ -8,6 +8,7 @@
 		<link rel="stylesheet" type="text/css" media="screen,print" href="css/normalize.css"/>
 		<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet"/>
 		<link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" media="screen,print" href="../libs/bootstrap/dist/css/bootstrap.min.css"/>
 		<link rel="stylesheet" type="text/css" media="screen,print" href="../libs/font-awesome/css/font-awesome.min.css"/>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -18,6 +19,7 @@
 		<script defer type="text/javascript" src="js/progressBar.js"></script>
 		<script defer type="text/javascript" src="js/perehod.js"></script>
 		<script defer type="text/javascript" src="js/ava_foto.js"></script>
+		<script defer type="text/javascript" src="js/resume_cvs.js"></script>
 	</head>
 	<body>
 		<header class="header">
@@ -30,7 +32,7 @@
 						<a href="#aboutMe">About me</a>
 					</li>
 					<li class="header_links_children">
-						<a href="#myCode">My code</a>
+						<a href="#myCode">Skills</a>
 					</li>
 					<li class="header_links_children">
 						<a href="#contacts">Contacts</a>
@@ -67,9 +69,97 @@
 					</div>
 				</div>
 				<!-- <hr class="line"></hr> -->
+				<h3 class="title_under_foto text-center">Web-designer & Frontend deweloper</h3>
 			</div>
 		<!--AvaFotoEffect-->
-			<div class="blank col-lg-2 col-md-2 col-sm-2 hidden-xs"></div>
+			<section id="timeline">
+				<div class="timeline">
+					<canvas id="cvs3"></canvas>
+					<article>
+						<h2>Education</h2>          
+						<figure>
+							<figcaption>Front End development</figcaption>
+							<h6>2015 - NOW</h6>
+							<p>
+								Successfully completed the Brain Academy Certification reguirements and recognized as a Brain Academy Certified Associate in Front End
+							</p>
+						</figure>
+						<figure>
+							<figcaption>english</figcaption>
+							<h6>2013-2015</h6>
+							<p>	
+								INTERMEDIATE course in English language school “NewTone”</br>
+								ADVANCED course in English language school “Big Bang” 
+							</p>
+						</figure>
+						<figure>
+							<figcaption>architecture & design & science</figcaption>
+							<h6>20010 - 2012</h6>
+							<p>
+								Master’s degree in Architecture
+								O.M. Beketov National University Of Urban Economy in Kharkiv
+							</p>
+						</figure>
+						<figure>
+							<figcaption>architecture & design</figcaption>
+							<h6>2006-2010</h6>
+							<p>                    
+								Bachelor’s degree in Urban Design
+								O.M. Beketov National University Of Urban Economy in Kharkiv
+							</p>
+						</figure>
+					</article>
+					<article>
+						<h2>Work</h2>
+						<figure>
+							<figcaption>Your Company?</figcaption>
+							<h6>NOW</h6>
+							<p>
+								Give me a chance to realize my best strengths: intelligence, diligence and creativity to  contribute the bright future in your company.
+						</figure>
+						<figure>
+							<figcaption>freelance front-end development</figcaption>
+							<h6>2010 - 2011</h6>
+							<p>
+								Create Landing pages and small companies’ websites, write simple scripts. Work width Html5, SCSS, CSS-animations, JavaScript/JQwery, Git, Gulp/Bower
+							</p>
+						</figure>
+						<figure>
+							<figcaption>freelance web-design development</figcaption>
+							<h6>2015-2016</h6>
+							<p>
+								Development of corporate identity. Create website design templates and logo for companies. Create images for social networks and templates for promotional products. Work width Adobe Photoshop & CorelDraw
+							</p>
+						</figure>
+						<figure>
+							<figcaption>content manager</figcaption>
+							<h6>2015-2016</h6>
+							<p>
+								Writing new unique content for the
+								website, adapt images and upload them on web hosting
+
+							</p>
+						</figure>
+						<figure>
+							<figcaption>lead architect</figcaption>
+							<h6>2014-2015</h6>
+							<p>
+								Developing projects from the conceptual design stage to the stage of detailed design, construction coordination with state authorities and other experts, designers and builders
+							</p>
+						</figure>
+						<figure>
+							<figcaption>architect & designer</figcaption>
+							<h6>2012-2014</h6>
+							<p>
+								Work with clients. Creating templates, development of project design. 3D visualization and Graphic design.
+							</p>
+						</figure>
+					</article>
+					<br style="clear:both" />
+				</div>
+			</section>
+			
+			<!-- <div class="blank col-lg-2 col-md-2 col-sm-2 hidden-xs"></div>
 			<div class="about_me_cnt col-lg-8 col-md-8 col-sm-8 col-xs-12 text-center">
 				<h3>JS developer</h3>
 				<p class="line margin">SUMMARY OF QUALIFICATION</p>
@@ -131,7 +221,7 @@
 				</ul>
 			</div>
 			<div class="col-lg-2 col-md-2 col-sm-2 hidden-xs"></div>
-			<div class="about_me_footer col-lg-12 col-md-12 col-sm-12 col-xs-12"></div>
+			<div class="about_me_footer col-lg-12 col-md-12 col-sm-12 col-xs-12"></div> -->
 		</section>
 		<section id="myCode"  class="my_code">
 			<section class="block_title"><h1>Skills</h1></section>
@@ -300,6 +390,7 @@
 				<a target="blank" href="https://vk.com/id24980015" class="icon fa fa-vk"></a>
 				<a target="blank" href="skype:prokopenko_anna22?userinfo" class="icon fa fa-skype"></a>
 				<a target="blank" href="https://ua.linkedin.com/in/anna-prokopenko-860445138" class="icon fa fa-linkedin"></a>
+				<a target="blank" href="https://github.com/Anna22Prokopenko" class="icon fa fa-github"></a>
 			</div>
 			<!-- <div class="post_box_img"></div>
 			<form class="forma">
