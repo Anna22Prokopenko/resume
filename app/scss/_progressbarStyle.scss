@@ -5,10 +5,10 @@ $under_circle_title_color: #4f6cb1;
 /* $circle_cnt_height: 20%; */
 $circle_size: 17vh;
 $radial_progress_size: 19vh;
-$circle_margin: 0 3vh 8vh 3vh;
+$circle_margin: 0 7vh 35vh 7vh;
 $inset_size: 15vh;
 $inset-color: #fff;
-$percentage_font_size: 6vh;
+$percentage_font_size: 4vh;
 $percentage_text_width: 20vh;
 $font_family: 'Amatic SC', cursive;
 
@@ -95,7 +95,6 @@ html,body {
 		}	
 		.text_underCircle {
 			display: inline-block;
-			position: absolute;
 			text-align: center;
 			margin-left: ($radial_progress_size / 2) / ($radial_progress_size / 2);
 			width: $radial_progress_size;
@@ -104,6 +103,33 @@ html,body {
 			font-family: $font_family;
 			font-size: $percentage_font_size - 2;
 			color: $under_circle_title_color;
+		}
+		.ul {
+			list-style: none;
+			text-align: left;
+			margin-top: $circle_size + 5;
+			margin-left: -15%;
+			white-space: nowrap;
+			width: 170%;
+				.bold {
+					font-weight: bold;
+					color: #4f6cb1;
+				}
+				li {
+					text-align: left;
+					padding-top: 10px;
+					margin: 0 10%;
+					text-transform: none;
+					font-variant: small-caps;
+					font: 400 100% 'Open Sans';
+					color: #40526f;
+					border-bottom: 1px solid #f1f1f1;
+					overflow: hidden;
+					-ms-text-overflow: ellipsis;
+					-o-text-overflow: ellipsis;
+					text-overflow: ellipsis;
+
+				}
 		}
 }
 
