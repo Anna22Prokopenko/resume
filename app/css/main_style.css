@@ -106,9 +106,10 @@ input, textarea {
   justify-content: center;
   align-items: center;
   position: fixed;
-  top: 0;
-  margin-top: 95vh;
-  z-index: 1; }
+  /* top: 0;
+	margin-top: 95vh; */
+  bottom: 0;
+  z-index: 9999; }
   .footer small {
     font: 400 85% 'Raleway'; }
 
@@ -1996,7 +1997,9 @@ body, html {
         float: right; }
       .timeline article:first-of-type figure {
         border-right: 7px solid #d8e6f5;
-        padding-right: 10px; }
+        padding-right: 10px;
+        border-left: unset;
+        padding-left: unset; }
     .timeline article:last-of-type {
       float: right;
       text-align: left; }
@@ -2106,7 +2109,15 @@ body, html {
   body {
     font-size: 80%; }
   .title:before {
-    top: 32%; } }
+    top: 32%; }
+  .timeline p, .timeline ol {
+    font-size: 140%; } }
+
+@media only screen and (max-device-width: 450px) {
+  .timeline p, .timeline ol, .timeline h6 {
+    font-size: 140%; }
+  .radial-progress .ul li {
+    font-size: 200%; } }
 
 /* 	@media all and (max-width:360px){
 		#main{font-size:80%}
