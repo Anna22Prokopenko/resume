@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 //var mainBowerFiles = require('main-bower-files');
 var sass = require('gulp-sass');
-//var useref = require('gulp-useref');
+var useref = require('gulp-useref');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 //var gulpIf = require('gulp-if');
@@ -41,14 +41,14 @@ gulp.task('browserSync', function() {
 	})
 });
 
-/*gulp.task('useref', function() {
+gulp.task('useref', function() {
 	return gulp.src('app/*.html')
 	.pipe(useref())
-	.pipe(gulpIf('*.js', uglify()))
-	.pipe(gulpIf('*.css', cssnano()))
+	// .pipe(gulpIf('*.js', uglify()))
+	// .pipe(gulpIf('*.css', cssnano()))
 	.pipe(gulp.dest('dist'))
 });
-*/
+
 
 gulp.task('js', function() {
 	return gulp.src('app/js/**/*.js') //path to src of all js files
@@ -88,7 +88,7 @@ gulp.task('clean:dist', function(callback) {
 
 gulp.task('build', function (callback) {
 	runSequence(//'clean:dist',
-		['sass', 'js', 'images', 'css'],
+		['sass', 'js', 'images', 'css', 'useref'],
 		callback
 	)
 });
